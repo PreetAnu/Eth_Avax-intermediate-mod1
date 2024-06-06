@@ -1,12 +1,8 @@
-const { ethers } = require("hardhat");
-
 async function main() {
-    // Deploying MyContract
-    const MyContract = await ethers.getContractFactory("MyContract");
-    const myContract = await MyContract.deploy();
-    await myContract.deployed();
-    console.log("MyContract deployed to:", myContract.address);
-
+    const ErrorHandling = await ethers.getContractFactory("ErrorHandling");
+    const errorHandling = await ErrorHandling.deploy();
+    await errorHandling.deployed();
+    console.log("ErrorHandling deployed to:", errorHandling.address);
 }
 
 main()
